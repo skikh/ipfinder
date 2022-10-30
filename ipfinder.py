@@ -1,5 +1,4 @@
-from bs4 import BeautifulSoup
+import cgi
 
-with open("../ipfinder/index.html") as file:
-    src = file.read()
-print(src)
+form = cgi.FieldStorage()
+ip =  form.getvalue('searchbox')
